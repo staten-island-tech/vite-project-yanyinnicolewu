@@ -1,78 +1,117 @@
 const disneymovie = [
   {
     name: "The Lion King",
-    image: "https://link-to-lion-king-image.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/9/9d/Disney_The_Lion_King_2019.jpg",
     alt: "The Lion King movie poster",
   },
   {
     name: "Beauty and the Beast",
-    image: "https://link-to-beauty-and-the-beast-image.jpg",
+    image:
+      "https://lumiere-a.akamaihd.net/v1/images/p_beautyandthebeast1991_20488_592ec4b5.jpeg",
     alt: "Beauty and the Beast movie poster",
   },
   {
     name: "Aladdin",
-    image: "https://link-to-aladdin-image.jpg",
+    image:
+      "https://lumiere-a.akamaihd.net/v1/images/p_aladdin1992_20486_174ba005.jpeg",
     alt: "Aladdin movie poster",
   },
   {
     name: "Frozen",
-    image: "https://link-to-frozen-image.jpg",
+    image:
+      "https://lumiere-a.akamaihd.net/v1/images/p_frozen_18373_3131259c.jpeg?region=0%2C0%2C540%2C810",
     alt: "Frozen movie poster",
   },
   {
     name: "Moana",
-    image: "https://link-to-moana-image.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Moana_Teaser_Poster.jpg/250px-Moana_Teaser_Poster.jpg",
     alt: "Moana movie poster",
   },
   {
     name: "Cinderella",
-    image: "https://link-to-cinderella-image.jpg",
+    image:
+      "https://m.media-amazon.com/images/I/81WQv5bFbfL._AC_UF1000,1000_QL80_.jpg",
     alt: "Cinderella movie poster",
   },
   {
     name: "Snow White and the Seven Dwarfs",
-    image: "https://link-to-snow-white-image.jpg",
+    image:
+      "https://lumiere-a.akamaihd.net/v1/images/p_snowwhiteandthesevendwarfs_19871_806c8934.jpeg",
     alt: "Snow White and the Seven Dwarfs movie poster",
   },
   {
     name: "Peter Pan",
-    image: "https://link-to-peter-pan-image.jpg",
+    image:
+      "https://www.prindleinstitute.org/wp-content/uploads/2021/01/Screen-Shot-2021-01-29-at-6.51.28-AM.png",
     alt: "Peter Pan movie poster",
   },
   {
     name: "The Little Mermaid",
-    image: "https://link-to-little-mermaid-image.jpg",
+    image:
+      "https://lumiere-a.akamaihd.net/v1/images/p_thelittlemermaid_6a6ef760.jpeg",
     alt: "The Little Mermaid movie poster",
   },
   {
     name: "Mulan",
-    image: "https://link-to-mulan-image.jpg",
+    image:
+      "https://lumiere-a.akamaihd.net/v1/images/p_mulan_20529_83d3893a.jpeg",
     alt: "Mulan movie poster",
   },
   {
     name: "The Jungle Book",
-    image: "https://link-to-jungle-book-image.jpg",
+    image:
+      "https://m.media-amazon.com/images/I/918VXM4ZscL._AC_UF1000,1000_QL80_.jpg",
     alt: "The Jungle Book movie poster",
   },
   {
     name: "Tangled",
-    image: "https://link-to-tangled-image.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/en/a/a8/Tangled_poster.jpg",
     alt: "Tangled movie poster",
   },
   {
     name: "Zootopia",
-    image: "https://link-to-zootopia-image.jpg",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_.jpg",
     alt: "Zootopia movie poster",
   },
   {
     name: "Ratatouille",
-    image: "https://link-to-ratatouille-image.jpg",
+    image:
+      "https://lumiere-a.akamaihd.net/v1/images/p_ratatouille_19736_0814231f.jpeg",
     alt: "Ratatouille movie poster",
   },
   {
     name: "Toy Story",
-    image: "https://link-to-toy-story-image.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
     alt: "Toy Story movie poster",
+  },
+  {
+    name: "Inside Out",
+    image:
+      "https://lumiere-a.akamaihd.net/v1/images/p_insideout_19751_af12286c.jpeg",
+    alt: "",
+  },
+  {
+    name: "",
+    image: "",
+    alt: "",
+  },
+  {
+    name: "",
+    image: "",
+    alt: "",
+  },
+  {
+    name: "",
+    image: "",
+    alt: "",
+  },
+  {
+    name: "",
+    image: "",
+    alt: "",
   },
 ];
 
