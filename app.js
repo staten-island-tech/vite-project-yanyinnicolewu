@@ -1,13 +1,5 @@
 const disneymovie = [
   {
-    name: "",
-    image: "",
-    alt: "",
-  },
-];
-
-const disneymovie = [
-  {
     name: "The Lion King",
     image: "https://link-to-lion-king-image.jpg",
     alt: "The Lion King movie poster",
@@ -83,3 +75,16 @@ const disneymovie = [
     alt: "Toy Story movie poster",
   },
 ];
+
+function inject(item) {
+  const container = document.querySelector(".container");
+  const html = `
+    <div class="card" data-name="${item.name}" data-img="${item.img}" data-alt="${item.alt}" data-price="${item.price}">
+      <img class="card-img" src="${item.img}" alt="${item.alt}">
+      <h2 class="card-name">${item.name}</h2>
+      <p class="card-alt">${item.alt}</p>
+      <p class="card-price">Price: $${item.price}</p>
+      <button class="button">Add to Cart</button>
+    </div>`;
+  container.insertAdjacentHTML("afterbegin", html);
+}
