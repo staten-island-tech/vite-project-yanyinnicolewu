@@ -3,31 +3,31 @@ const disneymovie = [
     name: "The Lion King",
     image:
       "https://upload.wikimedia.org/wikipedia/en/9/9d/Disney_The_Lion_King_2019.jpg",
-    alt: "The Lion King movie poster",
+    alt: "The Lion King is a Disney story about a young lion prince, Simba, who is destined to be king but flees his kingdom after his father, Mufasa, is murdered by his uncle, Scar.",
   },
   {
     name: "Beauty and the Beast",
     image:
       "https://lumiere-a.akamaihd.net/v1/images/p_beautyandthebeast1991_20488_592ec4b5.jpeg",
-    alt: "Beauty and the Beast movie poster",
+    alt: "Beauty and the Beast it tells a story about a selfish prince cursed to be a monstrous beast who must learn to love and be loved in return to break the spell.",
   },
   {
     name: "Aladdin",
     image:
       "https://lumiere-a.akamaihd.net/v1/images/p_aladdin1992_20486_174ba005.jpeg",
-    alt: "Aladdin movie poster",
+    alt: "Aladdin tells the story of a poor street urchin named Aladdin who finds a magic lamp containing a powerful genie",
   },
   {
     name: "Frozen",
     image:
       "https://lumiere-a.akamaihd.net/v1/images/p_frozen_18373_3131259c.jpeg?region=0%2C0%2C540%2C810",
-    alt: "Frozen movie poster",
+    alt: "Frozen movie tells a stiry about two sisters in the kingdom of Arendelle: Elsa, who has magical powers to control ice and snow, and her younger sister, Anna.",
   },
   {
     name: "Moana",
     image:
       "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Moana_Teaser_Poster.jpg/250px-Moana_Teaser_Poster.jpg",
-    alt: "Moana movie poster",
+    alt: "",
   },
   {
     name: "Cinderella",
@@ -94,23 +94,26 @@ const disneymovie = [
     alt: "",
   },
   {
-    name: "",
-    image: "",
+    name: "Wreck-It Ralph",
+    image:
+      "https://m.media-amazon.com/images/M/MV5BNzMxNTExOTkyMF5BMl5BanBnXkFtZTcwMzEyNDc0OA@@._V1_.jpg",
     alt: "",
   },
   {
-    name: "",
+    name: "Monsters University",
     image: "",
+    alt: "https://lumiere-a.akamaihd.net/v1/images/p_monstersuniversity_19752_34ba9b39.jpeg?region=0%2C0%2C540%2C810",
+  },
+  {
+    name: "Luca",
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/3/33/Luca_%282021_film%29.png",
     alt: "",
   },
   {
-    name: "",
-    image: "",
-    alt: "",
-  },
-  {
-    name: "",
-    image: "",
+    name: "Elio",
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Elio_film_poster.jpg/250px-Elio_film_poster.jpg",
     alt: "",
   },
 ];
