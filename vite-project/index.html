@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,23 @@
     <title>vite-project</title>
   </head>
   <body>
+    <h1>Disney Movie</h1>
+    <section class="form-parent">
+      <form id="form">
+        <div class="form-inputs">
+          <div class="form-input">
+            <label for="title">Movie Name</label>
+            <div class="form-input"></div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <div class="filter">
+      <button data-filter="all">All</button>
+      <button data-filter="low">1990s - 1999s</button>
+      <button data-filter="mid">2000s - 2009s</button>
+      <button data-filter="high">2010s - 2020s</button>
+    </div>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
