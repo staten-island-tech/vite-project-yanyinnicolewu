@@ -146,12 +146,53 @@ const disneymovie = [
 function inject(item) {
   const container = document.querySelector(".container");
   const html = `
-    <div class="card" data-name="${item.name}" data-img="${item.img}" data-alt="${item.alt}" data-price="${item.price}">
+    <div class="card" data-name="${item.name}" data-img="${item.img}" data-alt="${item.alt}" data-year="${item.year}">
       <img class="card-img" src="${item.img}" alt="${item.alt}">
       <h2 class="card-name">${item.name}</h2>
       <p class="card-alt">${item.alt}</p>
-      <p class="card-price">Price: $${item.price}</p>
-      <button class="button">Add to Cart</button>
+      <p class="card-year">Year: $${item.year}</p>
+      <button class="button">Watched</button>
+      <button class="button">Want to Watch</button>
     </div>`;
   container.insertAdjacentHTML("afterbegin", html);
 }
+
+movies.forEach((item) => inject(item));
+
+function Watched() {
+  const buttons = document.querySelectorAll(".button");
+  buttons.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      const card = event.target.closest(".card");
+      const name = card.getAttribute("data-name");
+      const year = card.getAttribute("data-year");
+
+      const watched = document.querySelector(".watched");
+      const html = `<div class="cart-item" data-year="${year}">${name} : $${year}</div>`;
+      watched.insertAdjacentHTML("afterbegin", html);
+
+      insideWatched();
+    })
+  );
+}
+
+Watched();
+
+function addToCart() {
+  const buttons = document.querySelectorAll(".button");
+  buttons.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      const card = event.target.closest(".card");
+      const name = card.getAttribute("data-name");
+      const price = card.getAttribute("data-price");
+
+      const cart = document.querySelector(".cart");
+      const html = `<div class="cart-item" data-price="${price}">${name} : $${price}</div>`;
+      cart.insertAdjacentHTML("afterbegin", html);
+
+      insideCart();
+    })
+  );
+}
+
+addToCart();

@@ -13,17 +13,30 @@
         <div class="form-inputs">
           <div class="form-input">
             <label for="title">Movie Name</label>
-            <div class="form-input"></div>
+            <input type="text" id="title" class="text-box" required />
           </div>
+          <div class="form-input">
+            <label for="url"> Enter Image URL Here</label>
+            <input type="text" id="url" class="text-box" required />
+          </div>
+        </div>
+        <div class="hero-form-input">
+          <input type="submit" value="Submit" class="btn" />
         </div>
       </form>
     </section>
+
     <div class="filter">
       <button data-filter="all">All</button>
       <button data-filter="low">1990s - 1999s</button>
       <button data-filter="mid">2000s - 2009s</button>
       <button data-filter="high">2010s - 2020s</button>
     </div>
+    <div class="container"></div>
+    <h3>Watched</h3>
+    <div class="watched"></div>
+    <h4>Want to Watch</h4>
+    <div class="want to watch"></div>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
