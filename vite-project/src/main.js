@@ -178,21 +178,31 @@ function Watched() {
 
 Watched();
 
-function addToCart() {
-  const buttons = document.querySelectorAll(".button");
-  buttons.forEach((btn) =>
-    btn.addEventListener("click", function (event) {
-      const card = event.target.closest(".card");
-      const name = card.getAttribute("data-name");
-      const price = card.getAttribute("data-price");
+function filter(type) {
+  const container = document.querySelector(".container");
+  container.innerHTML = "";
 
-      const cart = document.querySelector(".cart");
-      const html = `<div class="cart-item" data-price="${price}">${name} : $${price}</div>`;
-      cart.insertAdjacentHTML("afterbegin", html);
+  movies.forEach(function (movie) {
+    if (
+      type === "all" ||
+      (type === "low" && movie.year < 1999) ||
+      (type === "mid" && movie.year >= 2000 && movie.year <= 2009) ||
+      (type === "high" && movie.year > 2009)
+    ) {
+      inject(movie);
+    }
+  });
 
-      insideCart();
-    })
-  );
+  Watched();
 }
 
-addToCart();
+function showFilter() {
+  const buttons = document.querySelectorAll(".filter button");
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      filter(btn.getAttribute("data-filter"));
+    });
+  });
+}
+
+showFilter();
