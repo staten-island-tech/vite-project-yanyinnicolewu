@@ -22,7 +22,7 @@ import "./style.css";
 // `
 
 // setupCounter(document.querySelector('#counter'))
-const disneymovie = [
+const disneymovies = [
   {
     name: "The Lion King",
     img: "https://upload.wikimedia.org/wikipedia/en/9/9d/Disney_The_Lion_King_2019.jpg",
@@ -128,61 +128,90 @@ const disneymovie = [
 function inject(item) {
   const container = document.querySelector(".container");
   const html = `
-    <div class="card" data-name="${item.name}" data-img="${item.img}" data-alt="${item.alt}" data-year="${item.year}">
-      <img class="card-img" src="${item.img}" alt="${item.alt}">
+    <div class="card"
+          data-name="${item.name}" 
+          data-img="${item.img}"
+          data-alt="${item.alt}" 
+          data-year="${item.year}">
+      <img class="card-img" src="${item.img}">
       <h2 class="card-name">${item.name}</h2>
       <p class="card-alt">${item.alt}</p>
-      <p class="card-year">Year: $${item.year}</p>
-      <button class="button">Watched</button>
-    </div>`;
+     <p class="card-year">Year: $${item.year}</p>
+     <button class="button">Watched</button>
+   </div>`;
   container.insertAdjacentHTML("afterbegin", html);
 }
 
-movies.forEach((item) => inject(item));
-
-function Watched() {
-  const buttons = document.querySelectorAll(".button");
-  buttons.forEach((btn) =>
-    btn.addEventListener("click", function (event) {
-      const card = event.target.closest(".card");
-      const name = card.getAttribute("data-name");
-      const year = card.getAttribute("data-year");
-
-      const watched = document.querySelector(".watched");
-      const html = `<div class="cart-item" data-year="${year}">${name} : $${year}</div>`;
-      watched.insertAdjacentHTML("afterbegin", html);
-
-      insideWatched();
-    })
-  );
-}
-
-Watched();
+disneymovies.forEach((item) => inject(item));
 
 function filter(type) {
   const container = document.querySelector(".container");
   container.innerHTML = "";
 
-  movies.forEach(function (movie) {
+  disneymovies.forEach((disneymovie) => {
+    const year = movie.year;
+
+    if (type === "all") inject(disneymovie);
+
+    if (type === "low" && disneymovie.year < 1999) {
+      inject(disneymovie);
+    }
+
     if (
-      type === "all" ||
-      (type === "low" && movie.year < 1999) ||
-      (type === "mid" && movie.year >= 2000 && movie.year <= 2009) ||
-      (type === "high" && movie.year > 2009)
+      type === "mid" &&
+      disneymovie.year >= 2000 &&
+      disneymovie.year <= 2009
     ) {
-      inject(movie);
+      inject(disneymovie);
+    }
+
+    if (type === "high" && disneymovie.year > 2009) {
+      inject(disneymovie);
     }
   });
-
-  Watched();
 }
 
 function showFilter() {
   const buttons = document.querySelectorAll(".filter button");
-  buttons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      filter(btn.getAttribute("data-filter"));
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filterType = btn.getAttribute("data-filter");
+      filter(filterType);
     });
   });
 }
+
 showFilter();
+
+document.addEventListener("clik", (e) => {
+  if (e.target.className === "toWatch") {
+    const card = e.target.closet(".card");
+    const showWatched = document.querySelector(".showWatched");
+
+    const name = card.getAttribute("data-name");
+    const img = card.getAttribute("data-img");
+    const alt = card.getAttribute("data-alt");
+    const year = card.getAttribute("data-year");
+
+    const html = `
+      <div class = "card" data-name = "${name}" data-img="${img}" data-alt="${alt}" data-year="${year}">
+        <img class = "card-img" src="${img}">
+        <h2 class="card-name">${name}</h2>
+        <p class = "card-alt">${alt}</p>
+        <p class = "card-year">Year: ${year}</p>
+        </div>
+    `;
+
+    showWatched.insertAdjecentHTML("afterbegin", html);
+  }
+});
+
+themeBtn.addEventListener("click", () => {
+  if (document.body.classList.contains("light")) {
+    document.body.classList.remove("light");
+    document.body.classList.add("dark");
+  } else {
+    document.body.classList.remove("dark");
+    document.body.classList.add("light");
+  }
+});
