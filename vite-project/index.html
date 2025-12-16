@@ -4,35 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-project</title>
+    <title>DisneyMovie</title>
   </head>
   <body>
     <h1>Disney Movie</h1>
-    <!-- <section class="form-parent">
-      <form id="form">
-        <div class="form-inputs">
-          <div class="form-input">
-            <label for="title">Movie Name</label>
-            <input type="text" id="title" class="text-box" required />
-          </div>
-          <div class="form-input">
-            <label for="url"> Enter Image URL Here</label>
-            <input type="text" id="url" class="text-box" required />
-          </div>
-        </div>
-        <div class="hero-form-input">
-          <input type="submit" value="Submit" class="btn" />
-        </div>
-      </form>
-    </section> -->
 
     <button class="theme-btn">Switch Theme</button>
 
+    <form id="searchform">
+      <div class="form-inputs">
+        <div class="form-input">
+          <label for="title">Movie Name</label>
+          <input type="text" id="title" class="text-box" required />
+        </div>
+        <div class="form-input">
+          <label for="url"> Enter Image URL Here</label>
+          <input type="text" id="url" class="text-box" required />
+        </div>
+      </div>
+      <div class="hero-form-input">
+        <input type="submit" value="Submit" class="btn" />
+      </div>
+    </form>
+
     <div class="filter">
       <button data-filter="all">All</button>
-      <button data-filter="low">1990 - 1999</button>
+      <button data-filter="old">1990 - 1999</button>
       <button data-filter="mid">2000 - 2009</button>
-      <button data-filter="high">2010 - 2020</button>
+      <button data-filter="recent">2010 - 2020</button>
     </div>
 
     <div class="container"></div>

@@ -78,7 +78,7 @@ button:hover {
 }
 
 .container,
-.showRead {
+.showWatched {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
